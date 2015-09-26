@@ -2,7 +2,7 @@
 #define STRING_CALCULATOR_HPP
 int add (std::string tekst){
   if(tekst =="")return 0;
-  return 1;
+  else return atoi(tekst.c_str());
 }
 
 

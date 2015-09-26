@@ -7,6 +7,8 @@ TEST(StringCalculator, ZwracaZeroDlaPustegoTekstu) {
 }
 
 TEST(StringCalculator, ZwracaDanaPojedynczaLiczbe ) {
-  ASSERT_THAT(add("1"), Eq(1));
+  EXPECT_THAT(add("1"), Eq(1));
+  EXPECT_THAT(add("2"), Eq(2));
+  EXPECT_THAT(add("4"), Eq(4));
 }
 
