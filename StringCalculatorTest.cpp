@@ -12,3 +12,7 @@ TEST(StringCalculator, ZwracaDanaPojedynczaLiczbe ) {
   EXPECT_THAT(add("4"), Eq(4));
 }
 
+TEST(StringCalculator, DodajeDwieLiczbyPoPrzecinku ) {
+  EXPECT_THAT(add("1,1"), Eq(2));
+}
+

@@ -7,10 +7,17 @@ int zamienTxtNaLiczbe (string tekst){
   return atoi(tekst.c_str());
 }
 
-int add (string tekst){
-  if(tekst =="") return 0;
-  return zamienTxtNaLiczbe(tekst);
+bool pojedynczaLiczba(string tekst){
+  size_t found=tekst.find(',');
+  if(found==string::npos) return true;
+  return false;
 }
 
+int add (string tekst){
+  if(tekst.empty()) return 0;
+  if(pojedynczaLiczba(tekst)) 
+    return zamienTxtNaLiczbe(tekst);
+  return 2;
+}
 
 #endif //STRING_CALCULATOR_HPP
