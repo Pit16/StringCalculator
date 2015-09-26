@@ -6,3 +6,7 @@ TEST(StringCalculator, ZwracaZeroDlaPustegoTekstu) {
   ASSERT_THAT(add(""), Eq(0));
 }
 
+TEST(StringCalculator, ZwracaDanaPojedynczaLiczbe ) {
+  ASSERT_THAT(add("1"), Eq(1));
+}
+
