@@ -17,7 +17,10 @@ int add (string tekst){
   if(tekst.empty()) return 0;
   if(pojedynczaLiczba(tekst)) 
     return zamienTxtNaLiczbe(tekst);
-  return 2;
+  string pierwszaLiczba = tekst.substr(0,1);
+  string drugaLiczba = tekst.substr(2,1);
+  return zamienTxtNaLiczbe(pierwszaLiczba)+zamienTxtNaLiczbe(drugaLiczba);
 }
+
 
 #endif //STRING_CALCULATOR_HPP
