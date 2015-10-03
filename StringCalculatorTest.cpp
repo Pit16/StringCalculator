@@ -15,5 +15,6 @@ TEST(StringCalculator, ZwracaDanaPojedynczaLiczbe ) {
 TEST(StringCalculator, DodajeDwieLiczbyPoPrzecinku ) {
   EXPECT_THAT(add("1,1"), Eq(2));
   EXPECT_THAT(add("2,1"), Eq(3));
+  EXPECT_THAT(add("21,31"), Eq(52));
 }
 

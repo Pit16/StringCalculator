@@ -15,10 +15,13 @@ bool pojedynczaLiczba(string tekst){
 
 int add (string tekst){
   if(tekst.empty()) return 0;
+
   if(pojedynczaLiczba(tekst)) 
     return zamienTxtNaLiczbe(tekst);
-  string pierwszaLiczba = tekst.substr(0,1);
-  string drugaLiczba = tekst.substr(2,1);
+
+  size_t pozycjaPrzecinka = tekst.find(',');
+  string pierwszaLiczba = tekst.substr(0,pozycjaPrzecinka);
+  string drugaLiczba = tekst.substr(pozycjaPrzecinka+1);
   return zamienTxtNaLiczbe(pierwszaLiczba)+zamienTxtNaLiczbe(drugaLiczba);
 }
 
