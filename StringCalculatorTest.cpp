@@ -18,3 +18,7 @@ TEST(StringCalculator, DodajeDwieLiczbyPoPrzecinku ) {
   EXPECT_THAT(add("21,31"), Eq(52));
 }
 
+
+TEST(StringCalculator, DodajeWieleLiczbPoPrzecinku ) {
+  EXPECT_THAT(add("1,1,1"), Eq(3));
+}

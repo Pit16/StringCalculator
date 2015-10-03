@@ -19,10 +19,23 @@ int add (string tekst){
   if(pojedynczaLiczba(tekst)) 
     return zamienTxtNaLiczbe(tekst);
 
+  int suma = 0;
+  
   size_t pozycjaPrzecinka = tekst.find(',');
   string pierwszaLiczba = tekst.substr(0,pozycjaPrzecinka);
-  string drugaLiczba = tekst.substr(pozycjaPrzecinka+1);
-  return zamienTxtNaLiczbe(pierwszaLiczba)+zamienTxtNaLiczbe(drugaLiczba);
+  suma+=zamienTxtNaLiczbe(pierwszaLiczba);
+  size_t pozycjaPrzecinkaDwa = tekst.find(',',pozycjaPrzecinka+1);
+
+  string drugaLiczba = tekst.substr(pozycjaPrzecinka+1, pozycjaPrzecinkaDwa);
+  suma+=zamienTxtNaLiczbe(drugaLiczba);
+  if(pozycjaPrzecinkaDwa != string::npos)
+  {
+    string trzeciaLiczba = tekst.substr(pozycjaPrzecinkaDwa+1);
+    suma+=zamienTxtNaLiczbe(trzeciaLiczba);
+  }
+
+  return suma;
+
 }
 
 
